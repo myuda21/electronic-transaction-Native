@@ -1,14 +1,22 @@
-// src/presentation/pages/ProductListPage.tsx
 import React, { useEffect, useState } from "react";
 import { View, FlatList, SafeAreaView } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import { ProductEntity } from "../../domain/entity/product_entity";
 import ProductCard from "../components/product_card";
+import { NativeStackNavigationProp } from "react-native-screens/lib/typescript/native-stack/types";
+import { RootStackParamList } from "../navigation/types";
+
+type ProductListPageNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  "ProductListPage"
+>;
 
 export default function ProductListPage() {
   const [products, setProducts] = useState<ProductEntity[]>([]);
+  const navigation = useNavigation<ProductListPageNavigationProp>();
 
   useEffect(() => {
-    // Simulasi fetch produk (nanti diganti pakai usecase)
     setProducts([
       {
         id: 1,
@@ -35,7 +43,9 @@ export default function ProductListPage() {
         renderItem={({ item }) => (
           <ProductCard
             product={item}
-            onPress={() => console.log("Goto detail")}
+            onPress={() =>
+              navigation.navigate("ProductDetailPage", { product: item })
+            }
           />
         )}
       />
