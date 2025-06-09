@@ -1,5 +1,4 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -12,6 +11,5 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "types": ["react", "react-native"]
-  },
-  "include": ["src"]
+  }
 }
