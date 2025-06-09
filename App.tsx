@@ -1,13 +1,12 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import AppNavigator from "./src/presentation/navigation/app_navigator";
 
-const App = () => {
+export default function App() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Hello React Native tes</Text>
-    </View>
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
   );
-};
-
-export default App;
+}
 
