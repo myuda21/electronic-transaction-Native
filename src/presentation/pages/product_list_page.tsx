@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { View, FlatList, SafeAreaView } from "react-native";
+import { View, FlatList, SafeAreaView, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { ProductEntity } from "../../domain/entity/product_entity";
 import ProductCard from "../components/product_card";
 import { NativeStackNavigationProp } from "react-native-screens/lib/typescript/native-stack/types";
 import { RootStackParamList } from "../navigation/types";
+import { AppRoute } from "../../constants/constant";
 
 type ProductListPageNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -37,6 +38,12 @@ export default function ProductListPage() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#f5f5f5", padding: 16 }}>
+      {/* Button ke CartPage */}
+      <Button
+        title="Lihat Keranjang"
+        onPress={() => navigation.navigate(AppRoute.CART_PAGE as never)}
+      />
+
       <FlatList
         data={products}
         keyExtractor={(item) => item.id.toString()}
