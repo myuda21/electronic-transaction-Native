@@ -10,6 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-vector-icons/evil-icons": "^12.0.0",
+    "@react-native-vector-icons/fontawesome6": "^12.0.0",
     "@react-navigation/native": "^7.1.10",
     "@react-navigation/stack": "^7.3.3",
     "@tanstack/react-query": "^5.80.6",
@@ -17,6 +19,7 @@
     "react": "19.0.0",
     "react-native": "0.79.3",
     "react-native-gesture-handler": "^2.25.0",
+    "react-native-paper": "^5.14.5",
     "react-native-reanimated": "^3.18.0",
     "react-native-safe-area-context": "^5.4.1",
     "react-native-screens": "^4.11.1",
