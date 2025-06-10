@@ -4,4 +4,5 @@ export interface ProductEntity {
   price: number;
   image: string;
   description: string;
+  categories: string[];
 }
