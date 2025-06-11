@@ -1,6 +1,6 @@
 // src/presentation/components/ProductCard.tsx
 import React from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { ProductEntity } from "../../domain/entity/product_entity";
 
 type Props = {
