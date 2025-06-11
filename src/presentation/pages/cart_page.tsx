@@ -50,7 +50,6 @@
 //   total: { fontSize: 18, fontWeight: "bold", marginVertical: 16 },
 // });
 
-// src/presentation/pages/cart_page.tsx
 import React from "react";
 import { View, Text, Button, TouchableOpacity, StyleSheet, FlatList, Alert } from "react-native";
 import { useCart } from "../../context/cart_context";
